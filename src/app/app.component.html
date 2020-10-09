@@ -1,0 +1,35 @@
+<div class="jumbotron">
+    <h1>Google News Blog</h1>
+</div>
+
+<div *ngFor="let article of articles">
+    <div class="container-fluid">
+        <div class="row my-4">
+            <div class="col-lg-4">
+                <img [src]="article.urlToImage" alt="" class="img-fluid shadow">
+            </div>
+            <div class="col-lg-8">
+                <p>
+                    <small>Author: <strong>{{ article.author }}</strong> </small>
+                 |  <small>Publish: <strong>{{ article.publishedAt | date }}</strong></small>
+                </p>
+                <h2>{{ article.title }}</h2>
+                <p>{{ article.description}}</p>
+                <p>{{ article.content}}</p>
+            </div>
+        </div>
+        <hr>
+    </div>
+</div>
+
+
+<footer class="py-2">
+    <div class="container-fluid">
+       <div class="row">
+           <div class="col">
+            Design & Developed By <a href="http://webathar.tk/" target="_blank">Mahmod Athar</a>
+           </div>
+       </div> 
+    </div>
+</footer>
+  
